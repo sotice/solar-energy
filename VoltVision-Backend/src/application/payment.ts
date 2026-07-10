@@ -3,12 +3,17 @@ import { Request, Response, NextFunction } from "express";
 import { Invoice } from "../infrastructure/entities/Invoice";
 import { NotFoundError, ValidationError } from "../domain/errors/errors";
 
-// Initialize Stripe
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "", {
-  // Updated to match the version expected by your installed library
-  apiVersion: "2025-11-17.clover", 
-  
-});
+// Initialize Stripe (only if key is configured)
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: "2025-11-17.clover",
+    })
+  : null;
+
+function requireStripe() {
+  if (!stripe) throw new Error("STRIPE_SECRET_KEY is not configured");
+  return stripe;
+}
 
 // 1. Create Checkout Session (Frontend calls this)
 export const createCheckoutSession = async (req: Request, res: Response, next: NextFunction) => {
@@ -26,7 +31,7 @@ export const createCheckoutSession = async (req: Request, res: Response, next: N
     }
 
     // Create Stripe Session
-    const session = await stripe.checkout.sessions.create({
+    const session = await requireStripe().checkout.sessions.create({
       ui_mode: "embedded",
       line_items: [
         {
@@ -52,7 +57,7 @@ export const createCheckoutSession = async (req: Request, res: Response, next: N
 export const getSessionStatus = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { session_id } = req.query;
-    const session = await stripe.checkout.sessions.retrieve(session_id as string);
+    const session = await requireStripe().checkout.sessions.retrieve(session_id as string);
 
     res.json({
       status: session.status,
@@ -71,7 +76,7 @@ export const handleStripeWebhook = async (req: Request, res: Response, next: Nex
 
   try {
     // Verify the event came from Stripe
-    event = stripe.webhooks.constructEvent(
+    event = requireStripe().webhooks.constructEvent(
       req.body, 
       sig as string, 
       process.env.STRIPE_WEBHOOK_SECRET || ""
