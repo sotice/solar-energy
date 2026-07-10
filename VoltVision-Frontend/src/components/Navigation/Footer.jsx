@@ -52,19 +52,19 @@ export default function Footer() {
                 <span className="text-sm text-base-content/70">
                   123 Innovation Drive,<br/>
                   Energy Tech Park,<br/>
-                  Colombo 07, Sri Lanka
+                  Shanghai, China
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5  shrink-0" />
-                <a href="tel:+94112345678" className="text-sm text-base-content/70 hover:text-primary transition-colors">
-                  +94 11 234 5678
+                <a href="tel:+862112345678" className="text-sm text-base-content/70 hover:text-primary transition-colors">
+                  +86 21 1234 5678
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5  shrink-0" />
-                <a href="mailto:hello@sunshine.lk" className="text-sm text-base-content/70 hover:text-primary transition-colors">
-                  hello@sunshine.lk
+                <a href="mailto:hello@sunshine.cn" className="text-sm text-base-content/70 hover:text-primary transition-colors">
+                  hello@sunshine.cn
                 </a>
               </li>
             </ul>

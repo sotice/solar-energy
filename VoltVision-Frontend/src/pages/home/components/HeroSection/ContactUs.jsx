@@ -33,8 +33,8 @@ export default function ContactUs() {
             Get in <span className="text-primary">Touch</span>
           </h1>
           <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
-            Have a question about your solar monitoring? Need enterprise solutions? 
-            Our team in Colombo is ready to help.
+            Have a question about your solar monitoring? Need enterprise solutions?
+            Our team in Shanghai is ready to help.
           </p>
         </div>
       </section>
@@ -46,25 +46,25 @@ export default function ContactUs() {
           <div className="space-y-8" data-aos="fade-right" data-aos-delay="200">
             
             <div className="grid gap-6">
-              <ContactCard 
-                icon={Phone} 
-                title="Call Us" 
-                content="+94 11 234 5678" 
+              <ContactCard
+                icon={Phone}
+                title="Call Us"
+                content="+86 21 1234 5678"
                 sub="Mon-Fri from 8am to 5pm"
-                action="tel:+94112345678"
+                action="tel:+862112345678"
               />
-              <ContactCard 
-                icon={Mail} 
-                title="Email Us" 
-                content="hello@sunshine.lk"
+              <ContactCard
+                icon={Mail}
+                title="Email Us"
+                content="hello@sunshine.cn"
                 sub="We'll respond within 24 hours"
-                action="mailto:hello@sunshine.lk"
+                action="mailto:hello@sunshine.cn"
               />
-              <ContactCard 
-                icon={MapPin} 
-                title="Visit Us" 
-                content="123 Innovation Drive, Colombo 07" 
-                sub="Energy Tech Park, Sri Lanka"
+              <ContactCard
+                icon={MapPin}
+                title="Visit Us"
+                content="123 Innovation Drive, Shanghai 200000"
+                sub="Energy Tech Park, China"
                 action="https://maps.google.com"
               />
             </div>
@@ -73,7 +73,7 @@ export default function ContactUs() {
             <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-lg border border-base-300 group">
                 <img 
                     src="/assets/images/srilanka.jpg" 
-                    alt="Colombo Map Location" 
+                    alt="Shanghai Map Location" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors" />

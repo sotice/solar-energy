@@ -8,9 +8,9 @@ export const getWeatherData = async (
   next: NextFunction
 ) => {
   try {
-    // Hardcoded coordinates (Colombo example)
-    const lat = 6.9271;
-    const lon = 79.8612;
+    // Hardcoded coordinates (Shanghai, China)
+    const lat = 31.2304;
+    const lon = 121.4737;
 
     // ✅ ADDED: &current=...wind_speed_10m
     const response = await fetch(
