@@ -56,9 +56,9 @@ export default function ContactUs() {
               <ContactCard 
                 icon={Mail} 
                 title="Email Us" 
-                content="hello@voltvision.lk" 
+                content="hello@sunshine.lk"
                 sub="We'll respond within 24 hours"
-                action="mailto:hello@voltvision.lk"
+                action="mailto:hello@sunshine.lk"
               />
               <ContactCard 
                 icon={MapPin} 
@@ -78,7 +78,7 @@ export default function ContactUs() {
                 />
                 <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors" />
                 <div className="absolute bottom-4 left-4 bg-base-100/90 backdrop-blur px-4 py-2 rounded-lg text-sm font-semibold shadow-sm">
-                    📍 VoltVision HQ
+                    📍 Sunshine HQ
                 </div>
             </div>
           </div>

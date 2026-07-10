@@ -104,7 +104,7 @@
 //             <input
 //               value={formData.appName}
 //               onChange={(e) => handleChange("appName", e.target.value)}
-//               placeholder="e.g. VoltVision"
+//               placeholder="e.g. Sunshine"
 //               className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm"
 //             />
 //           </div>
@@ -305,7 +305,7 @@ export function SettingsTab() {
             <input
               value={formData.appName}
               onChange={(e) => handleChange("appName", e.target.value)}
-              placeholder="e.g. VoltVision"
+              placeholder="e.g. Sunshine"
               className="input input-bordered w-full focus:input-primary transition-all text-sm"
             />
           </div>

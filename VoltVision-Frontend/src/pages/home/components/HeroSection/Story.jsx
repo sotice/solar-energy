@@ -22,7 +22,7 @@ export default function Story() {
             </span>
           </h1>
           <p className="text-lg text-base-content/80 leading-relaxed max-w-2xl mx-auto">
-            From the bustling streets of Colombo to the sunny coasts of Trincomalee, VoltVision is dedicated to democratizing solar energy monitoring for every Sri Lankan household.
+            From the bustling streets of Colombo to the sunny coasts of Trincomalee, Sunshine is dedicated to democratizing solar energy monitoring for every Sri Lankan household.
           </p>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function Story() {
               <p className="text-base-content/80 text-lg leading-relaxed">
                 Sri Lanka is blessed with abundant sunlight year-round. Yet, many homeowners struggle to manage their solar investments effectively. 
                 <br/><br/>
-                We built VoltVision to bridge this gap. Our mission is to provide an intelligent, localized platform that helps Sri Lankans maximize their energy independence while reducing the national grid burden.
+                We built Sunshine to bridge this gap. Our mission is to provide an intelligent, localized platform that helps Sri Lankans maximize their energy independence while reducing the national grid burden.
               </p>
               
               <div className="grid grid-cols-2 gap-4">

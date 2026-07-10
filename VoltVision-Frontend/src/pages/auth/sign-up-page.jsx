@@ -14,7 +14,7 @@ const SignInPage = () => {
         <div className="max-w-lg space-y-6 text-center">
             <h1 className="text-5xl font-bold tracking-tight leading-tight text-base-content">
               Welcome to <br/>
-              <span className="">VoltVision</span>
+              <span className="">Sunshine</span>
             </h1>
             <p className="text-xl opacity-80 leading-relaxed text-base-content/80">
               Your complete solar energy monitoring solution. Track generation, detect anomalies, and manage billing in one unified platform.

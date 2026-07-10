@@ -18,14 +18,14 @@ export default function Solution() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               
-              {/* Floating "Aelora/VoltVision" Card */}
+              {/* Floating "Sunshine" Card */}
               <div className="absolute bottom-8 left-8 bg-base-100/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-base-200 flex items-center gap-4 animate-bounce-slow">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-content shadow-md">
                    <Zap className="w-6 h-6 fill-current" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Powered By</p>
-                  <p className="text-xl font-bold text-base-content">VoltVision</p>
+                  <p className="text-xl font-bold text-base-content">Sunshine</p>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function Solution() {
             </div>
 
             <p className="text-lg text-base-content/80 leading-relaxed">
-              The VoltVision Dashboard empowers homeowners to monitor solar performance, receive instant anomaly alerts, and optimize usage—all from one intuitive interface.
+              The Sunshine Dashboard empowers homeowners to monitor solar performance, receive instant anomaly alerts, and optimize usage—all from one intuitive interface.
             </p>
 
             {/* Feature List */}

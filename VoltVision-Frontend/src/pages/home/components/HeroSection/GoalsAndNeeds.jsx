@@ -98,7 +98,7 @@ export default function GoalsAndNeeds() {
                 </div>
               </div>
               <p className="mt-4 text-base-content/80 italic">
-                "VoltVision gave me clarity. I finally understand my energy production and resolved a shading issue that was costing me hundreds."
+                "Sunshine gave me clarity. I finally understand my energy production and resolved a shading issue that was costing me hundreds."
               </p>
             </div>
 

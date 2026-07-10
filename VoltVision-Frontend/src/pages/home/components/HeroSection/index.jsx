@@ -48,7 +48,7 @@ export default function HeroSection() {
             </h1>
 
             <p  className="text-lg sm:text-xl text-base-content/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Track your solar generation, detect anomalies instantly, and manage your energy savings with VoltVision's advanced dashboard.
+              Track your solar generation, detect anomalies instantly, and manage your energy savings with Sunshine's advanced dashboard.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">

@@ -108,7 +108,7 @@ export function AppSidebar() {
           <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-content shadow-sm overflow-hidden">
              <img src="/assets/logo/logo.png" alt="Logo" className="h-full w-full object-cover" />
           </div>
-          <span className="font-[Inter] text-lg font-bold tracking-tight">VoltVision</span>
+          <span className="font-[Inter] text-lg font-bold tracking-tight">Sunshine</span>
         </Link>
         <button 
           onClick={() => setIsMobileOpen(!isMobileOpen)}
@@ -140,13 +140,13 @@ export function AppSidebar() {
             <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-content shadow-sm group-hover:scale-105 transition-transform duration-200 overflow-hidden">
                <img
                   src="/assets/logo/logo.png"
-                  alt="VoltVision Logo"
+                  alt="Sunshine Logo"
                   className="h-full w-full object-cover"
                 />
             </div>
             <div className="flex flex-col">
               <span className="font-[Inter] text-lg font-bold tracking-tight leading-none">
-                VoltVision
+                Sunshine
               </span>
                <span className="text-[10px] text-base-content/60 font-medium tracking-wide">
                 Energy Monitor

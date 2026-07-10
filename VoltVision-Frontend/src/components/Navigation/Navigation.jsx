@@ -45,12 +45,12 @@ export default function Navigation() {
             <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-lime-400 overflow-hidden shadow-sm group-hover:scale-105 transition-transform duration-200">
               <img
                 src="/assets/logo/logo.png"
-                alt="VoltVision Logo"
+                alt="Sunshine Logo"
                 className="h-full w-full object-cover"
               />
             </div>
             <span className="font-[Inter] text-lg font-bold tracking-tight">
-              VoltVision
+              Sunshine
             </span>
           </Link>
 

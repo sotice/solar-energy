@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-VoltVision is a solar energy monitoring and management platform consisting of **three subsystems**: a backend API, a frontend SPA, and a data simulation service. The system tracks solar unit performance, generates invoices, processes payments via Stripe, and detects anomalies in energy generation.
+Sunshine is a solar energy monitoring and management platform consisting of **three subsystems**: a backend API, a frontend SPA, and a data simulation service. The system tracks solar unit performance, generates invoices, processes payments via Stripe, and detects anomalies in energy generation.
 
 ## Commands
 
@@ -41,11 +41,11 @@ npm run preview      # Preview production build
 ### Three-Subsystem Data Flow
 
 ```
-VoltVision-data-API (port 8001)     ← Generates simulated energy data every 10s
+Sunshine-data-API (port 8001)     ← Generates simulated energy data every 10s
        ↓ fetch (scheduled)
-VoltVision-Backend (port 8000)      ← Syncs records, runs anomaly detection
+Sunshine-Backend (port 8000)      ← Syncs records, runs anomaly detection
        ↓ JSON (REST)
-VoltVision-Frontend (port 5173)     ← React SPA consuming the backend API
+Sunshine-Frontend (port 5173)     ← React SPA consuming the backend API
 ```
 
 ### Backend (Express.js v5 + TypeScript)

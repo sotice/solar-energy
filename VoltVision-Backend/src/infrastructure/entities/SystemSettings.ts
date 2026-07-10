@@ -8,7 +8,7 @@ export interface ISystemSettings extends Document {
 }
 
 const SystemSettingsSchema = new Schema<ISystemSettings>({
-  appName: { type: String, default: 'VoltVision' },
+  appName: { type: String, default: 'Sunshine' },
   maintenanceMode: { type: Boolean, default: false },
   emailNotifications: { type: Boolean, default: true },
   logRetentionDays: { type: Number, default: 30 },

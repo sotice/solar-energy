@@ -13,9 +13,9 @@ export default function Footer() {
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 rounded-full bg-lime-400 flex justify-center items-center overflow-hidden shadow-sm group-hover:scale-105 transition-transform duration-200">
-                <img src="/assets/logo/logo.png" alt="VoltVision Logo" className="w-full h-full object-cover" />
+                <img src="/assets/logo/logo.png" alt="Sunshine Logo" className="w-full h-full object-cover" />
               </div>
-              <span className="font-[Inter] text-xl font-bold tracking-tight">VoltVision</span>
+              <span className="font-[Inter] text-xl font-bold tracking-tight">Sunshine</span>
             </Link>
             
             <p className="text-sm text-base-content/70 leading-relaxed max-w-xs">
@@ -63,8 +63,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5  shrink-0" />
-                <a href="mailto:hello@voltvision.lk" className="text-sm text-base-content/70 hover:text-primary transition-colors">
-                  hello@voltvision.lk
+                <a href="mailto:hello@sunshine.lk" className="text-sm text-base-content/70 hover:text-primary transition-colors">
+                  hello@sunshine.lk
                 </a>
               </li>
             </ul>
@@ -94,7 +94,7 @@ export default function Footer() {
 
         {/* --- BOTTOM BAR --- */}
         <div className="border-t border-base-300 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-base-content/60">
-          <p>© {new Date().getFullYear()} VoltVision. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sunshine. All rights reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

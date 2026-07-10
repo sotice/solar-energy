@@ -1,6 +1,6 @@
-# 🧠 VoltVision Learning Guide
+# 🧠 Sunshine Learning Guide
 
-Welcome to the VoltVision `LEARN.md`! If you are a new contributor, a team member, or just looking to understand how this project is stitched together, you're in the right place. 
+Welcome to the Sunshine `LEARN.md`! If you are a new contributor, a team member, or just looking to understand how this project is stitched together, you're in the right place.
 
 This document explains the architecture, core workflows, and technologies powering our solar energy management system so you can start contributing effectively.
 
@@ -8,7 +8,7 @@ This document explains the architecture, core workflows, and technologies poweri
 
 ## 🏗️ System Architecture Overview
 
-VoltVision is built as a **monorepo** utilizing a microservice-like approach. It is divided into three primary domains:
+Sunshine is built as a **monorepo** utilizing a microservice-like approach. It is divided into three primary domains:
 
 ### 1. The Frontend (`VoltVision-Frontend`)
 * **Role:** The user interface for both administrators and consumers.

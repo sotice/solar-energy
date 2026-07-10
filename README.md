@@ -1,11 +1,11 @@
-# VoltVision
+# Sunshine
 
 太阳能能源管理系统，提供实时监控、数据分析与账单管理功能。
 
 ## 项目结构
 
 ```text
-VoltVision/
+sunshine/
 ├── VoltVision-Backend/     # 后端 API 服务
 ├── VoltVision-Frontend/    # 前端 React 应用
 └── VoltVision-data-API/    # 数据采集服务
