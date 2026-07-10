@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "ourStory": "我们的故事",
+    "contactUs": "联系我们",
+    "dashboard": "控制台",
+    "signIn": "登录",
+    "getStarted": "开始使用",
+    "account": "账户",
+    "signUp": "注册",
+    "language": "语言",
+    "selectTheme": "选择主题",
+    "theme": "主题"
+  },
+  "sidebar": {
+    "dashboard": "控制台",
+    "anomalies": "异常告警",
+    "analytics": "数据分析",
+    "invoices": "账单",
+    "manageUnits": "设备管理",
+    "financialOverview": "财务概览",
+    "anomaliesOverview": "异常概览",
+    "settings": "系统设置",
+    "energyMonitor": "能源监控",
+    "solarUnits": "太阳能设备"
+  },
+  "footer": {
+    "solutions": "解决方案",
+    "getInTouch": "联系我们",
+    "stayUpdated": "获取更新",
+    "subscribe": "订阅我们的通讯，获取最新的太阳能技术资讯。",
+    "enterEmail": "输入您的邮箱",
+    "allRightsReserved": "保留所有权利。",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "digitalTwin": "数字孪生平台",
+    "predictiveAnalytics": "预测分析",
+    "remoteMonitoring": "远程监控",
+    "performanceOptimization": "性能优化",
+    "automatedReporting": "自动化报告",
+    "description": "通过先进的数字孪生和预测性 AI 洞察，革新可再生能源管理，共创可持续未来。"
+  },
+  "home": {
+    "heroTitle": "为您的家",
+    "heroSubtitle": "注入智能能量",
+    "heroDesc": "使用 Sunshine 高级仪表盘追踪太阳能发电、即时检测异常并管理您的能源收益。",
+    "smartMonitoring": "智能能源监控",
+    "getStarted": "立即开始",
+    "learnMore": "了解更多"
+  },
+  "auth": {
+    "welcomeTo": "欢迎使用",
+    "description": "一站式太阳能监控解决方案。在统一平台中追踪发电、检测异常、管理账单。",
+    "trustedBy": "受到业主信赖"
+  },
+  "common": {
+    "en": "English",
+    "zh": "中文",
+    "loading": "加载中...",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "search": "搜索"
+  }
+}

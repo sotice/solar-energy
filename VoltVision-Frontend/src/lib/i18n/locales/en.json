@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "ourStory": "Our Story",
+    "contactUs": "Contact Us",
+    "dashboard": "Dashboard",
+    "signIn": "Sign In",
+    "getStarted": "Get Started",
+    "account": "Account",
+    "signUp": "Sign Up",
+    "language": "Language",
+    "selectTheme": "Select Theme",
+    "theme": "Theme"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "anomalies": "Anomalies",
+    "analytics": "Analytics",
+    "invoices": "Invoices",
+    "manageUnits": "Manage Units",
+    "financialOverview": "Financial Overview",
+    "anomaliesOverview": "Anomalies Overview",
+    "settings": "Settings",
+    "energyMonitor": "Energy Monitor",
+    "solarUnits": "Solar Units"
+  },
+  "footer": {
+    "solutions": "Solutions",
+    "getInTouch": "Get in Touch",
+    "stayUpdated": "Stay Updated",
+    "subscribe": "Subscribe to our newsletter for the latest solar tech updates.",
+    "enterEmail": "Enter your email",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "digitalTwin": "Digital Twin Platform",
+    "predictiveAnalytics": "Predictive Analytics",
+    "remoteMonitoring": "Remote Monitoring",
+    "performanceOptimization": "Performance Optimization",
+    "automatedReporting": "Automated Reporting",
+    "description": "Revolutionizing renewable energy management through advanced digital twins and predictive AI insights for a sustainable future."
+  },
+  "home": {
+    "heroTitle": "Power Your Home",
+    "heroSubtitle": "With Intelligence",
+    "heroDesc": "Track your solar generation, detect anomalies instantly, and manage your energy savings with Sunshine's advanced dashboard.",
+    "smartMonitoring": "Smart Energy Monitoring",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "auth": {
+    "welcomeTo": "Welcome to",
+    "description": "Your complete solar energy monitoring solution. Track generation, detect anomalies, and manage billing in one unified platform.",
+    "trustedBy": "Trusted by Homeowners"
+  },
+  "common": {
+    "en": "English",
+    "zh": "中文",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search"
+  }
+}
