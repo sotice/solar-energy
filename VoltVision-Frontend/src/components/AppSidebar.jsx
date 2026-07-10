@@ -15,26 +15,28 @@ import {
 } from "lucide-react";
 import { Link, useLocation } from "react-router";
 import { useUser } from "@clerk/clerk-react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 // 1. Define Standard Items
 const userItems = [
   {
-    title: "Dashboard",
+    titleKey: "sidebar.dashboard",
     url: "/dashboard",
     icon: <LayoutDashboard className="w-5 h-5" />,
   },
   {
-    title: "Anomalies",
+    titleKey: "sidebar.anomalies",
     url: "/dashboard/anomalies",
     icon: <TriangleAlert className="w-5 h-5" />,
   },
   {
-    title: "Analytics",
+    titleKey: "sidebar.analytics",
     url: "/dashboard/analytics",
     icon: <ChartLine className="w-5 h-5" />,
   },
   {
-    title: "Invoices",
+    titleKey: "sidebar.invoices",
     url: "/dashboard/invoices",
     icon: <BadgeDollarSign className="w-5 h-5" />,
   },
@@ -43,22 +45,22 @@ const userItems = [
 // 2. Define Admin Items
 const adminItems = [
   {
-    title: "Manage Units",
+    titleKey: "sidebar.manageUnits",
     url: "/admin/solar-units",
     icon: <Sun className="w-5 h-5" />,
   },
   {
-    title: "Financial Overview",
+    titleKey: "sidebar.financialOverview",
     url: "/admin/invoices-dashbord",
     icon: <Landmark className="w-5 h-5" />,
   },
     {
-    title: "Anomalies Overview",
+    titleKey: "sidebar.anomaliesOverview",
     url: "/admi/anomalies",
     icon: <AlertTriangle className="w-5 h-5" />,
   },
   {
-    title: "Settings",
+    titleKey: "sidebar.settings",
     url: "/admin/settings",
     icon: <Settings className="w-5 h-5" />,
   },
@@ -66,6 +68,7 @@ const adminItems = [
 
 // Custom Sidebar Item Component
 const SidebarItem = ({ item, onClick }) => {
+  const { t } = useTranslation();
   let location = useLocation();
   // const isActive = location.pathname === item.url || location.pathname.startsWith(`${item.url}/`);
   const isActive =
@@ -82,13 +85,13 @@ const SidebarItem = ({ item, onClick }) => {
         className={`
           flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 font-medium text-sm
           ${isActive
-            ? "bg-primary/10 " 
+            ? "bg-primary/10 "
             : "text-base-content/70 hover:bg-base-200 hover:text-base-content"
           }
         `}
       >
         {item.icon}
-        <span>{item.title}</span>
+        <span>{t(item.titleKey)}</span>
       </Link>
     </li>
   );
@@ -96,6 +99,7 @@ const SidebarItem = ({ item, onClick }) => {
 
 export function AppSidebar() {
   const { user } = useUser();
+  const { t } = useTranslation();
   const isAdmin = user?.publicMetadata?.role === "admin";
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -110,17 +114,20 @@ export function AppSidebar() {
           </div>
           <span className="font-[Inter] text-lg font-bold tracking-tight">Sunshine</span>
         </Link>
-        <button 
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="p-2 rounded-md hover:bg-base-200 transition-colors text-base-content"
-        >
-          {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className="p-2 rounded-md hover:bg-base-200 transition-colors text-base-content"
+          >
+            {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* --- MOBILE BACKDROP --- */}
       {isMobileOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 md:hidden"
           onClick={() => setIsMobileOpen(false)}
         />
@@ -130,7 +137,7 @@ export function AppSidebar() {
       {/* Fixed: z-50 places it below the header (z-60) but above content */}
       <aside className={`
         fixed md:sticky top-0 z-50 h-screen w-64 flex-col bg-base-100 text-base-content border-r border-base-200 transition-transform duration-300 ease-in-out
-        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} 
+        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
         md:translate-x-0 md:flex
       `}>
 
@@ -144,14 +151,15 @@ export function AppSidebar() {
                   className="h-full w-full object-cover"
                 />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col flex-1">
               <span className="font-[Inter] text-lg font-bold tracking-tight leading-none">
                 Sunshine
               </span>
                <span className="text-[10px] text-base-content/60 font-medium tracking-wide">
-                Energy Monitor
+                {t("sidebar.energyMonitor")}
               </span>
             </div>
+            <LanguageSwitcher />
           </Link>
         </div>
 
