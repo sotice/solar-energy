@@ -171,11 +171,16 @@ server.use("/api/invoices", invoiceRouter);
 server.use("/api/payments", paymentRouter);
 server.use("/api/anomalies", anomalyRouter);
 server.use("/api/settings", settingsRouter);
-// 6. Analytics Routes
+// 6. Root Route - Health Check
+server.get("/", (req, res) => {
+  res.json({ name: "Sunshine API", status: "running", version: "1.0.0" });
+});
+
+// 7. Analytics Routes
 server.get("/api/weather", getWeatherData);
 server.get("/api/analytics/capacity-factor/:id", authenticationMiddleware, getCapacityFactorStats);
 
-// 7. Error Handling (Always Last)
+// 8. Error Handling (Always Last)
 server.use(globalErrorHandler);
 
 // --- STARTUP LOGIC ---
