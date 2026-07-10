@@ -1,15 +1,18 @@
 
 import { useState } from "react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
-import { Palette, LayoutDashboard, Menu, X, Book, Phone } from "lucide-react"; // Added Info, Phone
+import { Palette, LayoutDashboard, Menu, X, Book, Phone } from "lucide-react";
 import { THEMES } from "@/lib/constants/theme";
 import { useThemeStore } from "@/lib/constants/useThemeStore";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useThemeStore();
+  const { t } = useTranslation();
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -22,7 +25,7 @@ export default function Navigation() {
         className={`flex items-center  gap-2 text-sm font-medium  transition-colors ${mobile ? "px-3 py-2 hover:bg-base-200 rounded-md" : ""}`}
       >
         <Book className="h-4 w-4" />
-        Our Story
+        {t("nav.ourStory")}
       </Link>
       <Link
         to="/contact-us"
@@ -30,7 +33,7 @@ export default function Navigation() {
         className={`flex items-center  gap-2 text-sm font-medium transition-colors ${mobile ? "px-3 py-2 hover:bg-base-200 rounded-md" : ""}`}
       >
         <Phone className="h-4 w-4" />
-        Contact Us
+        {t("nav.contactUs")}
       </Link>
     </>
   );
@@ -60,7 +63,10 @@ export default function Navigation() {
             {/* 1. Public Pages (Visible to Everyone) */}
             <PublicLinks />
 
-            {/* 2. Theme Dropdown */}
+            {/* 2. Language Switcher */}
+            <LanguageSwitcher />
+
+            {/* 3. Theme Dropdown */}
             <div className="dropdown dropdown-end">
               <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-sm">
                 <Palette className="h-5 w-5" />
@@ -69,7 +75,7 @@ export default function Navigation() {
                 tabIndex={0}
                 className="dropdown-content z-[100] menu p-2 shadow-lg bg-base-200 rounded-box w-52 max-h-96 overflow-y-auto border border-base-300"
               >
-                <li className="menu-title px-4 py-2 text-xs uppercase opacity-50">Select Theme</li>
+                <li className="menu-title px-4 py-2 text-xs uppercase opacity-50">{t("nav.selectTheme")}</li>
                 {THEMES.map((t) => (
                   <li key={t}>
                     <button
@@ -84,25 +90,25 @@ export default function Navigation() {
               </ul>
             </div>
 
-            {/* 3. Dashboard Link (Protected) */}
+            {/* 4. Dashboard Link (Protected) */}
             <SignedIn>
               <Link
                 to="/dashboard"
                 className="flex items-center gap-2 text-sm font-medium   transition-colors"
               >
                 <LayoutDashboard className="h-4 w-4" />
-                Dashboard
+                {t("nav.dashboard")}
               </Link>
             </SignedIn>
 
-            {/* 4. Auth Buttons */}
+            {/* 5. Auth Buttons */}
             <div className="flex items-center gap-2 border-l border-base-300 pl-6">
               <SignedOut>
                 <Button asChild variant="ghost" size="sm">
-                  <Link to="/sign-in">Sign In</Link>
+                  <Link to="/sign-in">{t("nav.signIn")}</Link>
                 </Button>
                 <Button asChild size="sm">
-                  <Link to="/sign-up">Get Started</Link>
+                  <Link to="/sign-up">{t("nav.getStarted")}</Link>
                 </Button>
               </SignedOut>
               <SignedIn>
@@ -120,6 +126,9 @@ export default function Navigation() {
 
           {/* --- MOBILE MENU TOGGLE (Visible on Mobile) --- */}
           <div className="flex md:hidden items-center gap-4">
+             {/* Mobile Language Toggle */}
+             <LanguageSwitcher />
+
              {/* Mobile Theme Toggle */}
              <div className="dropdown dropdown-end">
               <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-sm">
@@ -156,10 +165,10 @@ export default function Navigation() {
                 className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-base-200"
               >
                 <LayoutDashboard className="h-5 w-5" />
-                Dashboard
+                {t("nav.dashboard")}
               </Link>
               <div className="flex items-center justify-between px-3 py-2">
-                <span className="text-sm font-medium">Account</span>
+                <span className="text-sm font-medium">{t("nav.account")}</span>
                 <UserButton />
               </div>
             </SignedIn>
@@ -167,10 +176,10 @@ export default function Navigation() {
             <SignedOut>
               <div className="grid text-black grid-cols-2 gap-4 pt-2">
                 <Button asChild variant="outline" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Link to="/sign-in">Sign In</Link>
+                  <Link to="/sign-in">{t("nav.signIn")}</Link>
                 </Button>
                 <Button asChild onClick={() => setIsMobileMenuOpen(false)}>
-                  <Link to="/sign-up">Sign Up</Link>
+                  <Link to="/sign-up">{t("nav.signUp")}</Link>
                 </Button>
               </div>
             </SignedOut>
