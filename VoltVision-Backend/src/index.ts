@@ -157,7 +157,12 @@ server.post(
   handleStripeWebhook
 );
 
-// 3. ✅ CLERK MIDDLEWARE (CRITICAL: Must be before API routes)
+// 3. Root Route - Health Check (before Clerk, no auth needed)
+server.get("/", (req, res) => {
+  res.json({ name: "Sunshine API", status: "running", version: "1.0.0" });
+});
+
+// 4. ✅ CLERK MIDDLEWARE (CRITICAL: Must be before API routes)
 server.use(clerkMiddleware());
 
 // 4. Standard Body Parser
