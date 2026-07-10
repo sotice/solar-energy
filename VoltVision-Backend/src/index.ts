@@ -176,10 +176,6 @@ server.use("/api/invoices", invoiceRouter);
 server.use("/api/payments", paymentRouter);
 server.use("/api/anomalies", anomalyRouter);
 server.use("/api/settings", settingsRouter);
-// 6. Root Route - Health Check
-server.get("/", (req, res) => {
-  res.json({ name: "Sunshine API", status: "running", version: "1.0.0" });
-});
 
 // 7. Analytics Routes
 server.get("/api/weather", getWeatherData);
